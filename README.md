@@ -23,6 +23,19 @@ oracle@server:~$ lsnrctl services PROD
 oracle@server:~$ ps -ef|grep n000
 ```
 
+Tablespace expand
+```sh
+export ORACLE_HOME=/home/oracle/u01/app/oracle/product/11.2.0/dbhome_1
+export ORACLE_SID=DBSIMPON
+./sqlplus /nolog
+SQL> conn SYSTEM as sysdba
+SQL> select TABLESPACE_NAME, FILE_NAME, BYTES from DBA_DATA_FILES;
+SQL> alter database datafile
+     '/home/oracle/u01/app/oracle/oradata/DBSIMPON/system01.dbf'
+     resize 1024M;
+```
+
+
 ### Reference
  1. http://psoug.org/reference/dbms_connection_pool.html
  2. https://kkempf.wordpress.com/2011/07/29/oracle-database-resident-connection-pooling-drcp/
