@@ -39,3 +39,4 @@ SQL> alter database datafile
 ### Reference
  1. http://psoug.org/reference/dbms_connection_pool.html
  2. https://kkempf.wordpress.com/2011/07/29/oracle-database-resident-connection-pooling-drcp/
+ 3. http://psoug.org/snippet/TABLESPACE-List-tablespaces-files-allocated-and-free-space_852.htm
